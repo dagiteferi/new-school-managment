@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font Awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header Section Starts -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-book"></i> edu</a>
+      <nav class="navbar">
+        <a href="#home" class="hover-underline">home</a>
+        <a href="#about" class="hover-underline">about</a>
+        <a href="#courses" class="hover-underline">courses</a>
+        <a href="#teacher" class="hover-underline">teacher</a>
+        <a href="#review" class="hover-underline">review</a>
+        <a href="#blog" class="hover-underline">blog</a>
+        <a href="#contact" class="hover-underline">contact</a>
+        <a href="#subjects" class="hover-underline">books</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <button type="submit" class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="icons">
+        <div id="login-btn" class="fas fa-user"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+      <!-- Login Form -->
+      <form action="" class="login-form">
+        <h3>login form</h3>
+        <input type="email" placeholder="enter your email" class="box" />
+        <input type="password" placeholder="enter your password" class="box" />
+        <div class="remember">
+          <input type="checkbox" name="" id="remember" />
+          <label for="remember">remember me</label>
+        </div>
+        <a href="#" class="btn">
+          <span class="text text-1">login now</span>
+          <span class="text text-2" aria-hidden="true">login now</span>
+        </a>
+      </form>
+    </header>
+    <!-- Header Section Ends -->
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <button class="tab-button active" onclick="openTab('newCurriculum')">
+        New Curriculum
+      </button>
+      <button class="tab-button" onclick="openTab('oldCurriculum')">
+        Old Curriculum
+      </button>
+    </div>
+    <!-- <div class="search-container">
+      <input type="text" placeholder="Search books..." class="search-bar" />
+      <button type="submit" class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </div> -->
+
+    <!-- Subjects Section Starts -->
+    <section class="all">
+      <section id="subjects" class="subjects">
+        <!-- New Curriculum -->
+        <div id="newCurriculum" class="tab-content">
+          <h1 class="heading">New Curriculum - GRADE 1</h1>
+          <div class="box-container">
+            <div class="box">
+              <img src="../images/books/grade 1/1 (13).jfif" alt="" />
+              <h3>Mathematics</h3>
+              <p>New Curriculum Student textbook</p>
+              <a href="../path/to/mathematics.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+            <div class="box">
+              <img src="../images/books/grade 1/1 (14).jfif" alt="" />
+              <h3>Science</h3>
+              <p>New Curriculum Student textbook</p>
+              <a href="../path/to/science.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+            <div class="box">
+              <img src="../images/books/grade 1/1 (15).jfif" alt="" />
+              <h3>English</h3>
+              <p>New Curriculum Student textbook</p>
+              <a href="../path/to/english.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+          </div>
+          <div class="box-container">
+            <div class="box">
+              <img src="../images/books/grade 1/1 (16).jfif" alt="" />
+              <h3>History</h3>
+              <p>New Curriculum Student textbook</p>
+              <a href="../path/to/history.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+            <div class="box">
+              <img src="../images/books/grade 1/1 (17).jfif" alt="" />
+              <h3>Biology</h3>
+              <p>New Curriculum Student textbook</p>
+              <a href="../path/to/biology.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+            <div class="box">
+              <img src="../images/books/grade 1/1 (7).jfif" alt="" />
+              <h3>Chemistry</h3>
+              <p>New Curriculum Student textbook</p>
+              <a href="../path/to/chemistry.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+          </div>
+        </div>
+        <!-- Old Curriculum -->
+        <div id="oldCurriculum" class="tab-content" style="display: none">
+          <h1 class="heading">Old Curriculum - GRADE 1</h1>
+          <div class="box-container">
+            <div class="box">
+              <img src="../images/books/grade 1/1 (1).jfif" alt="" />
+              <h3>Mathematics</h3>
+              <p>Old Curriculum Student textbook</p>
+              <a href="../path/to/mathematics_old.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+            <div class="box">
+              <img src="../images/books/grade 1/1 (2).jfif" alt="" />
+              <h3>Science</h3>
+              <p>Old Curriculum Student textbook</p>
+              <a href="../path/to/science_old.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+            <div class="box">
+              <img src="../images/books/grade 1/1 (3).jfif" alt="" />
+              <h3>English</h3>
+              <p>Old Curriculum Student textbook</p>
+              <a href="../path/to/english_old.pdf" class="btn download-btn"
+                >Download</a
+              >
+              <a href="" class="btn download-btn">view</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grades">
+        <!-- <h1 class="heading">Ethiopian Textbooks Categories</h1> -->
+        <div>
+          <a href="#" class="btn download-btn">Grade 1</a>
+          <a href="#" class="btn download-btn">Grade 2</a>
+          <a href="#" class="btn download-btn">Grade 3</a>
+          <a href="#" class="btn download-btn">Grade 4</a>
+          <a href="#" class="btn download-btn">Grade 5</a>
+          <a href="#" class="btn download-btn">Grade 6</a>
+          <a href="#" class="btn download-btn">Grade 7</a>
+          <a href="#" class="btn download-btn">Grade 8</a>
+          <a href="#" class="btn download-btn">Grade 9</a>
+          <a href="#" class="btn download-btn">Grade 10</a>
+          <a href="#" class="btn download-btn">Grade 11</a>
+          <a href="#" class="btn download-btn">Grade 12</a>
+        </div>
+      </section>
+    </section>
+    <!-- Subjects Section Ends -->
+
+    <!-- Contact Section Starts -->
+    <section class="contact" id="contact">
+      <h1 class="heading">Contact Us</h1>
+      <div class="row">
+        <div class="image">
+          <img src="../images/contact.png" alt="" />
+        </div>
+        <form action="">
+          <h3>Send Us a Message</h3>
+          <input type="text" placeholder="Name" class="box" />
+          <input type="email" placeholder="Email" class="box" />
+          <input type="number" placeholder="Phone Number" class="box" />
+          <textarea
+            placeholder="Message"
+            class="box"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <a href="#" class="btn">
+            <span class="text text-1">Send Message</span>
+            <span class="text text-2" aria-hidden="true">Send Message</span>
+          </a>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Find Us Here</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum
+            beatae.
+          </p>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Courses</a>
+          <a href="#">Teacher</a>
+          <a href="#">Review</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="box">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-phone"></i> +012 345 6789</p>
+          <p><i class="fas fa-envelope"></i> example@gmail.com</p>
+          <p><i class="fas fa-map"></i> Addis Ababa, Ethiopia</p>
+        </div>
+      </div>
+      <h1 class="credit">&copy; 2024 All Rights Reserved.</h1>
+    </section>
+    <!-- Footer Section Ends -->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      function openTab(tabName) {
+        var i, tabcontent, tablinks;
+
+        // Hide all tab content
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Remove "active" class from all buttons
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+      }
+
+      // Initialize the first tab
+      document.addEventListener("DOMContentLoaded", function () {
+        openTab("newCurriculum");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.description {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0f7fa;
+    margin: 20px 0;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+    <header>
+        <h1>World Gallery</h1>
+    </header>
+    <main>
+        <section class="description">
+            <h2>Explore the Beauty of Our World</h2>
+            <p>Join us on a visual journey through stunning landscapes, vibrant cultures, and incredible wildlife. Each image captures a unique aspect of our planet's beauty, inviting you to discover and appreciate the diverse wonders that surround us.</p>
+        </section>
+        
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="images/about.jpg" alt="Description of Image 1">
+                </div>
+                <div class="slide">
+                    <img src="images/blog-2.jpg" alt="Description of Image 2">
+                </div>
+                <div class="slide">
+                    <img src="images/review-4.png" alt="Description of Image 3">
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 World Gallery</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index >= slides.length) currentSlide = 0;
+    if (index < 0) currentSlide = slides.length - 1;
+    
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === currentSlide) ? 'block' : 'none';
+    });
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+    showSlide(currentSlide);
+}
+
+// Initialize the slider
+showSlide(currentSlide);
+
+    </script>
+</body>
+</html>

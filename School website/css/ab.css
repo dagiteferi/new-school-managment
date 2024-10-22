@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap");
 
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
 :root{
   --primary-color: #12c2b9;
   --secondary: #dbfffe;
@@ -59,7 +61,6 @@ section{
   margin-inline: auto;
   margin-top: -1rem;
 }
-
 
 .btn{
   position: relative;
@@ -255,10 +256,10 @@ section{
 /* home */
 
 .home{
-  min-height: 100vh;
+  min-height: 30vh;
   display: flex;
   align-items: center;
-  background: url(../images/home.jpg) no-repeat;
+  background: url(../images/R.gif) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -268,12 +269,14 @@ section{
 }
 
 .home .content h3{
+    text-align: center;
   font-size: 5rem;
   color: var(--white);
   line-height: 1.2;
 }
 
 .home .content p{
+    text-align: center;
   font-size: 1.5rem;
   line-height: 2;
   color: var(--white);
@@ -281,6 +284,114 @@ section{
 }
 
 /* ends */
+
+/*About answers*/
+
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+    color: aqua;
+    font-size: 50px;
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: #2ecc71;
+  font-size: 70rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+  font-size: 20px;
+}
+
+.faq-text {
+    font-size: 15px;
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}
+/*end
+
 
 /* about */
 
@@ -881,106 +992,3 @@ section{
     font-size: 50%;
   }
 }
-
-
-
-.t-products {
-  background-image: linear-gradient(to right top, #5629c0, #5625cb, #5620d5, #551ae0, #5412eb);
-  color: #fff;
-  border-radius: 3px
-}
-
-.processor {
-  background-color: #fff;
-  margin-top: 5px;
-  border-bottom: 1px solid #eee
-}
-
-.brand {
-  background-color: #fff;
-  border-bottom: 1px solid #eee
-}
-
-.type {
-  background-color: #fff
-}
-
-.product {
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  position: relative
-}
-
-.about span {
-  color: #5629c0;
-  font-size: 16px
-}
-
-.cart-button button {
-  font-size: 12px;
-  color: #fff;
-  background-color: #5629c0;
-  height: 38px
-}
-
-.cart-button button:focus,
-button:active {
-  font-size: 12px;
-  color: #fff;
-  background-color: #5629c0;
-  box-shadow: none
-}
-
-.product_fav i {
-  line-height: 40px;
-  color: #5629c0;
-  font-size: 15px
-}
-
-.product_fav {
-  display: inline-block;
-  width: 36px;
-  height: 39px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 11%;
-  text-align: center;
-  cursor: pointer;
-  margin-left: 3px;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  transition: all 200ms ease
-}
-
-.product_fav:hover {
-  background: #5629c0
-}
-
-.product_fav:hover i {
-  color: #fff
-}
-
-.about {
-  margin-top: 12px
-}
-
-.off {
-  position: absolute;
-  left: 65%;
-  top: 6%;
-  width: 80px;
-  text-align: center;
-  height: 30px;
-  line-height: 8px;
-  border-radius: 5px;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff
-}
-
-

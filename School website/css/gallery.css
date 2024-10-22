@@ -1,0 +1,204 @@
+
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: none; /* Light background color */
+  color: #333; /* Dark text color */
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd; /* Subtle border for the navbar */
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2em; /* Adjust size here */
+  color: #007bff; /* Change logo color here */
+  text-decoration: none;
+  font-weight: bold; /* Make the logo text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Light shadow for better visibility */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+  color: #28a745; /* Change hover color */
+  text-shadow: 2px 2px 6px rgba(40, 167, 69, 0.5); /* Enhance the glow effect on hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 15px 20px; /* Adjust padding to fit the line height */
+  display: block;
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-link img{
+  min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.nav-links a:hover {
+  background-color: #f0f0f0; /* Light background color on hover */
+  color: #ff6347; /* Change text color on hover */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.3); /* Light shadow effect */
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav-toggle .bar {
+  background-color: #333;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animated Menu */
+.nav-links.active {
+  transform: translateX(0%);
+}
+
+.nav-links.inactive {
+  transform: translateX(100%);
+}
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+main {
+  padding: 20px;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between gallery items */
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.33% - 20px); /* 3 items per row, adjusted for gap */
+  width: 300px; /* Fixed width for gallery items */
+  height: 300px; /* Fixed height for gallery items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure no overflow from images */
+  margin-bottom: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  border-radius: 3ch;
+}
+.ga1{
+width: 95%;
+height: 95%;
+border-radius: 8px;
+}
+
+.ga2{
+width: 99%;
+height: 89%;
+border-radius: 8px;
+}
+
+.ga3{
+width: 97%;
+height: 90%;
+border-radius: 8px;
+}
+
+.ga4{
+width: 97%;
+height: 89%;
+border-radius: 25ch;
+}
+
+.ga5{
+width: 100%;
+height: 91%;
+border-radius: 25ch;
+}
+
+/* Specific Styles for the Second Photo */
+
+
+
+/* Paragraph Styling */
+h1 {
+  text-align: center;
+ 
+  font-size: 20px; 
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .nav-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: #f9f9f9;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      transform: translateX(100%);
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the dropdown */
+      transition: transform 0.3s ease; /* Smooth sliding effect */
+  }
+
+  .nav-toggle {
+      display: flex;
+  }
+
+  .nav-links.active {
+      transform: translateX(0%);
+  }
+}
